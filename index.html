@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Sebin &amp; Shema — Betrothal &amp; Wedding Invitation</title>
+  <meta name="description"
+    content="With joy and gratitude, we invite you to celebrate the Betrothal of Sebin &amp; Shema on Saturday, 21st November 2026 in Kolayad, and their Wedding on Monday, 18th January 2027 in Mananthavadi.">
+
+  <!-- Open Graph / WhatsApp preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sebin-shema.vercel.app/">
+  <meta property="og:title" content="Sebin &amp; Shema — Betrothal &amp; Wedding Invitation">
+  <meta property="og:description"
+    content="Betrothal • 21 Nov 2026 • Kolayad — Wedding • 18 Jan 2027 • St. Joseph Cathedral Church, Kaniyaram.">
+  <meta property="og:image" content="https://sebin-shema.vercel.app/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sebin &amp; Shema — Betrothal &amp; Wedding Invitation">
+  <meta name="twitter:image" content="https://sebin-shema.vercel.app/og.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mrs+Saint+Delafield&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Background music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music toggle button -->
+  <button id="mute-btn" aria-label="Toggle background music" title="Toggle music">
+    <span class="music-pulse" aria-hidden="true"></span>
+    <svg id="icon-sound" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg id="icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <!-- ============================================================
+     COVER — OPENING ANIMATION
+============================================================ -->
+  <div id="cover" role="dialog" aria-label="Invitation opening" aria-modal="true">
+
+    <!-- Opening verse -->
+    <div class="cover-verse-wrap">
+      <div class="cover-cross-symbol" aria-hidden="true">✦</div>
+      <p class="cover-verse">
+        &ldquo;I found him whom my soul loves.&rdquo;
+        <span class="cover-verse-ref">Song of Solomon 3:4</span>
+      </p>
+    </div>
+
+    <!-- Left panel (Groom) -->
+    <div class="fold left">
+      <div class="cover-bottom">
+        <div class="cover-name">
+          <div class="n">Sebin</div>
+          <div class="r">The Groom</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center seal -->
+    <div class="cover-center" id="tapToOpen" role="button" tabindex="0" aria-label="Tap to open the invitation">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:72px;height:72px;"
+          aria-hidden="true">
+          <defs>
+            <linearGradient id="sealGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F0DFC0" />
+              <stop offset="50%" stop-color="#B89A6A" />
+              <stop offset="100%" stop-color="#8C7248" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="44" stroke="url(#sealGold)" stroke-width="1.2" stroke-dasharray="3 3"
+            opacity="0.80" />
+          <text x="50" y="64" text-anchor="middle" font-family="'Mrs Saint Delafield', cursive" font-size="58"
+            fill="url(#sealGold)">SS</text>
+        </svg>
+      </div>
+      <div class="tap-label">Tap to open</div>
+    </div>
+
+    <!-- Right panel (Bride) -->
+    <div class="fold right">
+      <div class="cover-bottom">
+        <div class="cover-name">
+          <div class="n">Shema</div>
+          <div class="r">The Bride</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+     MAIN CONTENT
+============================================================ -->
+  <main id="main">
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <span class="hero-sparkle" style="--dur:7s;--del:0s;   left:15%; top:70%;"></span>
+      <span class="hero-sparkle" style="--dur:9s;--del:1.5s; left:80%; top:60%;"></span>
+      <span class="hero-sparkle" style="--dur:8s;--del:3s;   left:30%; top:80%;"></span>
+      <span class="hero-sparkle" style="--dur:10s;--del:0.8s;left:65%; top:75%;"></span>
+      <span class="hero-sparkle" style="--dur:6s;--del:2.2s; left:50%; top:85%;"></span>
+      <span class="hero-sparkle" style="--dur:11s;--del:4s;  left:22%; top:55%;"></span>
+
+      <div class="hero-content reveal">
+        <div class="hero-backdrop">
+          <h1 class="hero-names" id="hero-heading">
+            Sebin
+            <span class="amp-script">&amp;</span>
+            Shema
+          </h1>
+
+          <p class="hero-tagline">
+            Together with our families, joyfully invite you<br>
+            to celebrate our
+          </p>
+
+          <div class="hero-event-label">Betrothal &amp; Wedding</div>
+          <div class="hero-dates">
+            Betrothal &middot; 21 November 2026<br>
+            Wedding &middot; 18 January 2027
+          </div>
+
+          <div class="divider" aria-hidden="true">
+            <span class="line"></span>
+            <span class="gem"></span>
+            <span class="line"></span>
+          </div>
+
+          <div class="scroll-cue" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="chev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== WELCOME MESSAGE + VERSE ====== -->
+    <section class="welcome" aria-labelledby="welcome-heading">
+      <div class="reveal">
+        <p class="eyebrow">With Joyful Hearts</p>
+        <div class="divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+        <h2 id="welcome-heading">You Are Warmly Invited</h2>
+      </div>
+      <div class="reveal" style="transition-delay: 0.15s; margin-top: 28px;">
+        <p class="welcome-body">
+          With immense joy and gratitude to God, the families of <em>Sebin</em> and <em>Shema</em> warmly invite you
+          to share in the blessings of their union.
+          <br><br>
+          With hearts full of gratitude to Almighty God, the two families come together to begin this
+          <strong>sacred new chapter</strong>. Surrounded by the love and prayers of both families, we invite you to
+          be part of our betrothal ceremony and the holy marriage celebrations that follow.
+        </p>
+
+        <div class="verse-block">
+          <div class="divider" aria-hidden="true"><span class="line"></span><span class="gem"></span><span
+              class="line"></span></div>
+          <p class="verse-text">&ldquo;I hold you in my heart, for we have shared God&rsquo;s blessings.&rdquo;</p>
+          <p class="verse-ref">Holy Bible &bull; Philippians 1:7</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BRIDE & GROOM SECTION ====== -->
+    <section class="couple-section" aria-labelledby="couple-heading">
+      <div class="reveal">
+        <p class="eyebrow">Brought Together by Faith &amp; Family</p>
+        <div class="divider"><span class="line"></span><span class="gem"></span><span class="line"></span></div>
+        <h2 id="couple-heading">Two Hearts, One Love</h2>
+      </div>
+
+      <!-- Couple Photo + Nameplate -->
+      <div class="couple-photo-wrap reveal" style="transition-delay:0.12s;">
+        <div class="couple-photo-frame">
+          <div class="couple-photo-corner couple-photo-corner--tl" aria-hidden="true"></div>
+          <div class="couple-photo-corner couple-photo-corner--tr" aria-hidden="true"></div>
+          <div class="couple-photo-corner couple-photo-corner--bl" aria-hidden="true"></div>
+          <div class="couple-photo-corner couple-photo-corner--br" aria-hidden="true"></div>
+          <img
+            src="image.png"
+            alt="Sebin &amp; Shema — Bride and Groom"
+            class="couple-photo-img"
+            loading="lazy">
+          <div class="couple-photo-overlay" aria-hidden="true"></div>
+          <div class="couple-photo-nameplate">
+            <span class="couple-photo-name couple-photo-name--groom">Sebin</span>
+            <span class="couple-photo-amp">&amp;</span>
+            <span class="couple-photo-name couple-photo-name--bride">Shema</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="couple-grid">
+        <div class="couple-card reveal left" style="transition-delay: 0.20s;">
+          <div class="role-tag">✦ The Groom ✦</div>
+          <div class="person-name">Sebin</div>
+          <div class="person-surname">Benny</div>
+          <div class="divider rose" style="margin: 0 auto 18px;" aria-hidden="true">
+            <span class="line"></span><span class="gem" style="background:var(--rose-soft);"></span><span
+              class="line"></span>
+          </div>
+          <div class="person-parents">
+            Beloved son of<br>
+            <em style="color:var(--rose-deep);">Mrs. Seleena Benny &amp; Mr. Benny Kuriakose</em>
+            <div class="person-house">Kumbalapally (H), Kaniyaram, Mananthavadi</div>
+          </div>
+        </div>
+
+        <div class="couple-and-separator reveal" style="transition-delay: 0.30s;" aria-hidden="true">&amp;</div>
+
+        <div class="couple-card reveal right" style="transition-delay: 0.40s;">
+          <div class="role-tag">✦ The Bride ✦</div>
+          <div class="person-name">Dr. Shema</div>
+          <div class="person-surname">Shyam</div>
+          <div class="divider rose" style="margin: 0 auto 18px;" aria-hidden="true">
+            <span class="line"></span><span class="gem" style="background:var(--rose-soft);"></span><span
+              class="line"></span>
+          </div>
+          <div class="person-parents">
+            Beloved daughter of<br>
+            <em style="color:var(--rose-deep);">Mrs. Daisy Shyam &amp; Mr. Shyamprasad P. V.</em>
+            <div class="person-house">Panthanamkulam (Vallomattathil), Kommeri, Kannur</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== COUNTDOWN — BETROTHAL ====== -->
+    <section class="countdown" aria-labelledby="countdown-heading">
+      <div class="reveal">
+        <p class="eyebrow light">Counting Down</p>
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="countdown-heading">Until the Betrothal</h2>
+      </div>
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <div class="countdown-grid" id="countdown" aria-live="polite" aria-label="Countdown to the betrothal">
+          <div class="cbox">
+            <div class="cnum" id="cd-days">00</div>
+            <div class="clabel">Days</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-hours">00</div>
+            <div class="clabel">Hours</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-mins">00</div>
+            <div class="clabel">Minutes</div>
+          </div>
+          <div class="cbox">
+            <div class="cnum" id="cd-secs">00</div>
+            <div class="clabel">Seconds</div>
+          </div>
+        </div>
+        <p class="countdown-until">Saturday, 21 November 2026 &mdash; 11:00 AM</p>
+      </div>
+    </section>
+
+    <!-- ====== WEDDING COUNTDOWN ====== -->
+    <section class="countdown countdown--wedding" aria-labelledby="wedding-countdown-heading">
+      <div class="reveal">
+        <p class="eyebrow light">The Big Day</p>
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="wedding-countdown-heading">Until the Wedding</h2>
+      </div>
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <div class="countdown-grid" id="wedding-countdown" aria-live="polite" aria-label="Countdown to the wedding">
+          <div class="cbox cbox--wedding">
+            <div class="cnum" id="wd-days">00</div>
+            <div class="clabel">Days</div>
+          </div>
+          <div class="cbox cbox--wedding">
+            <div class="cnum" id="wd-hours">00</div>
+            <div class="clabel">Hours</div>
+          </div>
+          <div class="cbox cbox--wedding">
+            <div class="cnum" id="wd-mins">00</div>
+            <div class="clabel">Minutes</div>
+          </div>
+          <div class="cbox cbox--wedding">
+            <div class="cnum" id="wd-secs">00</div>
+            <div class="clabel">Seconds</div>
+          </div>
+        </div>
+        <p class="countdown-until">Monday, 18 January 2027 &mdash; 10:00 AM</p>
+        <p class="countdown-venue-note">St. Joseph Cathedral Church, Kaniyaram, Mananthavadi</p>
+      </div>
+    </section>
+
+    <!-- ====== EVENTS ====== -->
+    <section class="events" aria-labelledby="events-heading">
+      <div class="reveal">
+        <p class="eyebrow">Save The Dates</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="events-heading">Our Events</h2>
+      </div>
+
+      <div class="event-cards">
+
+        <!-- Betrothal Card -->
+        <article class="event-card reveal left" style="transition-delay: 0.10s;">
+          <div class="event-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+              <path d="M15 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+              <path d="M12 6l-1.5-2.5h3L12 6z" />
+            </svg>
+          </div>
+          <div class="event-type">✦ Sacred Engagement ✦</div>
+          <h3>Betrothal Ceremony</h3>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+              </svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">Saturday, 21 November 2026</div>
+              <div class="secondary">11:00 AM</div>
+            </div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">St. Cornelius Roman Catholic Church</div>
+              <div class="secondary">Kolayad<br>Reception at Parish Hall, St. Cornelius Roman Catholic Church, Kolayad
+              </div>
+            </div>
+          </div>
+          <a class="event-btn"
+            href="https://www.google.com/maps/search/?api=1&query=St+Cornelius+Roman+Catholic+Church+Kolayad"
+            target="_blank" rel="noopener noreferrer" aria-label="View Betrothal location on Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              View Location
+            </span>
+          </a>
+        </article>
+
+        <!-- Wedding Card -->
+        <article class="event-card reveal right" style="transition-delay: 0.20s;">
+          <div class="event-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v5M9.5 4.5h5" />
+              <path d="M12 7L4 13v9h16v-9L12 7z" />
+              <path d="M10 22v-6a2 2 0 0 1 4 0v6" />
+            </svg>
+          </div>
+          <div class="event-type">✦ Holy Matrimony ✦</div>
+          <h3>Wedding &amp; Reception</h3>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
+              </svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">Monday, 18 January 2027</div>
+              <div class="secondary">10:00 AM</div>
+            </div>
+          </div>
+          <div class="event-detail">
+            <span class="event-detail-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </span>
+            <div class="event-detail-text">
+              <div class="primary">St. Joseph Cathedral Church</div>
+              <div class="secondary">Kaniyaram, Mananthavadi<br>Reception at Parish Hall, St. Joseph Cathedral Church,
+                Kaniyaram</div>
+            </div>
+          </div>
+          <a class="event-btn"
+            href="https://www.google.com/maps/search/?api=1&query=St+Joseph+Cathedral+Church+Kaniyaram+Mananthavadi"
+            target="_blank" rel="noopener noreferrer" aria-label="View Wedding location on Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              View Location
+            </span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== TIMELINE ====== -->
+    <section class="timeline" aria-labelledby="timeline-heading">
+      <div class="reveal">
+        <p class="eyebrow">Our Journey</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="timeline-heading">The Celebration</h2>
+      </div>
+
+      <ol class="timeline-list" aria-label="Celebration timeline">
+        <li class="tl-item reveal left" style="transition-delay: 0.10s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+              <path d="M15 10a5 5 0 1 0 0 10 5 5 0 0 0 0-10z" />
+              <path d="M12 6l-1.5-2.5h3L12 6z" />
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">21 November</div>
+            <div class="tl-title">Betrothal Ceremony</div>
+            <div class="tl-date">Saturday, 2026 &middot; 11:00 AM</div>
+          </div>
+        </li>
+        <li class="tl-item reveal right" style="transition-delay: 0.20s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M7 7h10" />
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">18 January</div>
+            <div class="tl-title">Holy Matrimony</div>
+            <div class="tl-date">Monday, 2027 &middot; 10:00 AM</div>
+          </div>
+        </li>
+        <li class="tl-item reveal left" style="transition-delay: 0.30s;">
+          <div class="tl-dot" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.78-8.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+          </div>
+          <div class="tl-content">
+            <div class="tl-tag">Forever</div>
+            <div class="tl-title">A New Chapter Begins</div>
+            <div class="tl-date">Together, hand in hand</div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ====== VENUE ====== -->
+    <section class="venue" aria-labelledby="venue-heading">
+      <div class="reveal">
+        <p class="eyebrow">Location &amp; Directions</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="venue-heading">Our Venues</h2>
+      </div>
+
+      <div class="venue-cards">
+
+        <!-- Betrothal Venue -->
+        <article class="venue-card reveal left" style="transition-delay: 0.10s;">
+          <div class="venue-tag">✦ Betrothal Venue ✦</div>
+          <div class="venue-title">Betrothal Ceremony</div>
+          <div class="venue-datetime">21 November 2026 &middot; 11:00 AM</div>
+          <p class="venue-place"><strong>St. Cornelius Roman Catholic Church</strong><br>Kolayad<br><em>Reception at Parish
+              Hall</em></p>
+          <div class="divider" aria-hidden="true" style="margin: 14px auto;">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <a class="venue-map-link"
+            href="https://www.google.com/maps/search/?api=1&query=St+Cornelius+Roman+Catholic+Church+Kolayad"
+            target="_blank" rel="noopener noreferrer" aria-label="Open Betrothal venue on Google Maps">
+            <div class="venue-map-placeholder venue-map-photo">
+              <img
+                src="assets/images/St. Cornelius Roman Catholic Church.png"
+                alt="St. Cornelius Roman Catholic Church, Kolayad"
+                class="venue-church-img">
+              <span class="venue-map-caption">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Tap to view on Google Maps
+              </span>
+            </div>
+          </a>
+          <a class="venue-btn"
+            href="https://www.google.com/maps/search/?api=1&query=St+Cornelius+Roman+Catholic+Church+Kolayad"
+            target="_blank" rel="noopener noreferrer" aria-label="Open Betrothal venue directions in Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Open Google Maps
+            </span>
+          </a>
+        </article>
+
+        <!-- Wedding Venue -->
+        <article class="venue-card reveal right" style="transition-delay: 0.20s;">
+          <div class="venue-tag">✦ Wedding Venue ✦</div>
+          <div class="venue-title">Wedding Ceremony</div>
+          <div class="venue-datetime">18 January 2027 &middot; 10:00 AM</div>
+          <p class="venue-place"><strong>St. Joseph Cathedral Church</strong><br>Kaniyaram, Mananthavadi<br><em>Reception
+              at Parish Hall</em></p>
+          <div class="divider" aria-hidden="true" style="margin: 14px auto;">
+            <span class="line"></span><span class="gem"></span><span class="line"></span>
+          </div>
+          <a class="venue-map-link"
+            href="https://www.google.com/maps/search/?api=1&query=St+Joseph+Cathedral+Church+Kaniyaram+Mananthavadi"
+            target="_blank" rel="noopener noreferrer" aria-label="Open Wedding venue on Google Maps">
+            <div class="venue-map-placeholder venue-map-photo">
+              <img
+                src="assets/images/St. Joseph Cathedral Church Kaniyaram, Mananthavadi.png"
+                alt="St. Joseph Cathedral Church, Kaniyaram, Mananthavadi"
+                class="venue-church-img">
+              <span class="venue-map-caption">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Tap to view on Google Maps
+              </span>
+            </div>
+          </a>
+          <a class="venue-btn"
+            href="https://www.google.com/maps/search/?api=1&query=St+Joseph+Cathedral+Church+Kaniyaram+Mananthavadi"
+            target="_blank" rel="noopener noreferrer" aria-label="Open Wedding venue directions in Google Maps">
+            <span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:6px;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Open Google Maps
+            </span>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====== GALLERY (Save The Date card) — hides itself if the image file is not in the folder ====== -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+      <div class="reveal">
+        <p class="eyebrow">Cherished Moments</p>
+        <div class="divider" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="gallery-heading">Save The Date</h2>
+      </div>
+      <figure class="gallery-frame reveal" style="transition-delay: 0.15s;">
+        <img src="Digital-01.png" alt="Sebin &amp; Shema"
+          onerror="var s=document.getElementById('gallery'); if(s) s.remove();">
+      </figure>
+    </section>
+
+    <!-- ====== BIBLE VERSE ====== -->
+    <section class="quote-section" aria-labelledby="quote-heading">
+      <div class="reveal">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>
+          <p class="quote-text" id="quote-heading">
+            Place me like a seal over your heart, like a seal on your arm.
+            For love is as strong as death, its jealousy as enduring as the grave.
+            It burns like blazing fire, like a mighty flame.
+          </p>
+          <footer style="margin-top: 26px;">
+            <cite class="quote-ref">Song of Solomon 8:6&ndash;7</cite>
+          </footer>
+        </blockquote>
+        <div class="divider light" aria-hidden="true" style="margin-top: 38px;">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RSVP (same markup & style as the previous version) ============ -->
+    <section class="rsvp" id="rsvp">
+      <div class="rsvp__wrap">
+        <div class="rsvp__head reveal">
+          <p class="eyebrow">Kindly Reply</p>
+          <h2 class="section-title">RSVP</h2>
+          <p class="rsvp__sub">Let us know if you'll be joining us — your presence means the world to us.</p>
+          <div class="rsvp-divider rsvp-divider--small"><span></span><i></i><span></span></div>
+        </div>
+
+        <form class="rsvp__form reveal" id="rsvpForm" novalidate>
+          <fieldset class="rsvp__attendance" id="rsvpAttendance">
+            <legend class="rsvp__attendance-legend">Will you attend?</legend>
+            <label class="rsvp__attend-btn" id="btnYes">
+              <input type="radio" name="attendance" value="yes" checked>
+              <span class="rsvp__attend-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </span>
+              <span>Joyfully Accepts</span>
+            </label>
+            <label class="rsvp__attend-btn" id="btnNo">
+              <input type="radio" name="attendance" value="no">
+              <span class="rsvp__attend-icon">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M18 6 6 18M6 6l12 12" />
+                </svg>
+              </span>
+              <span>Regretfully Declines</span>
+            </label>
+          </fieldset>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvpName">Your Name</label>
+            <input class="rsvp__input" type="text" id="rsvpName" name="name" autocomplete="name" required
+              placeholder="Full Name">
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvpCount">Number of Guests</label>
+            <div class="rsvp__counter">
+              <button type="button" class="rsvp__counter-btn" id="rsvpMinus" aria-label="Decrease">−</button>
+              <input class="rsvp__counter-input" type="number" id="rsvpCount" name="count" value="1" min="1" max="10"
+                readonly>
+              <button type="button" class="rsvp__counter-btn" id="rsvpPlus" aria-label="Increase">+</button>
+            </div>
+          </div>
+
+          <div class="rsvp__field">
+            <label class="rsvp__label" for="rsvpMessage">Message <span class="rsvp__optional">(optional)</span></label>
+            <textarea class="rsvp__input rsvp__textarea" id="rsvpMessage" name="message"
+              placeholder="A short note or blessing for Sebin &amp; Shema..." rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="rsvp__submit" id="rsvpSubmit">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"
+              aria-hidden="true">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Submit RSVP
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ====== CLOSING / THANK YOU ====== -->
+    <section class="closing" aria-labelledby="closing-heading">
+
+      <!-- Monogram -->
+      <div class="reveal" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+          style="width:72px;height:72px;margin-bottom:14px;">
+          <defs>
+            <linearGradient id="closingGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F0DFC0" />
+              <stop offset="50%" stop-color="#B89A6A" />
+              <stop offset="100%" stop-color="#A8843E" />
+            </linearGradient>
+          </defs>
+          <circle cx="50" cy="50" r="44" stroke="url(#closingGold)" stroke-width="1.2" stroke-dasharray="3 3"
+            opacity="0.80" />
+          <text x="50" y="64" text-anchor="middle" font-family="'Mrs Saint Delafield', cursive" font-size="58"
+            fill="url(#closingGold)">SS</text>
+        </svg>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.10s;">
+        <p class="eyebrow light">With Love &amp; Gratitude</p>
+        <div class="divider light" aria-hidden="true">
+          <span class="line"></span><span class="gem"></span><span class="line"></span>
+        </div>
+        <h2 id="closing-heading" class="names">Sebin &amp; Shema</h2>
+        <div class="date-label">Betrothal 21 · 11 · 2026 &nbsp;|&nbsp; Wedding 18 · 01 · 2027</div>
+      </div>
+
+      <div class="reveal" style="transition-delay: 0.20s;">
+        <p class="closing-msg">
+          With hearts full of joy and thanksgiving,<br>
+          we look forward to celebrating with you.<br>
+          <em style="font-size:0.9em;opacity:0.8;">Your presence is our greatest gift.</em>
+        </p>
+        <div class="hashtag">#SebinAndShema</div>
+      </div>
+
+      <div class="best-wishes reveal" style="transition-delay: 0.28s;">
+        <div class="best-wishes__inner">
+          <span class="best-wishes__gem" aria-hidden="true">✦</span>
+          <p class="best-wishes__text">
+            Best Wishes From<br>
+            <strong>Vallomattathil Family</strong> &amp; <strong>Kumbalapally Family</strong>
+          </p>
+          <span class="best-wishes__gem" aria-hidden="true">✦</span>
+        </div>
+      </div>
+
+      <div class="foot reveal" style="transition-delay: 0.30s;">
+        With Best Compliments From<br>
+        Kumbalapally &amp; Panthanamkulam Families
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
