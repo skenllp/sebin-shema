@@ -271,3 +271,81 @@
 
 
 })();
+
+/* ============================================================
+   ADD TO CALENDAR — Redirect to Google Calendar
+   ============================================================ */
+(function () {
+  "use strict";
+
+  function toUtcString(dtStr) {
+    if (!dtStr) return "";
+    var m = dtStr.match(/^(\d{4})(\d{2})(\d{2})T(\d{2})(\d{2})(\d{2})$/);
+    if (!m) return dtStr;
+    var year = parseInt(m[1], 10);
+    var month = parseInt(m[2], 10) - 1;
+    var day = parseInt(m[3], 10);
+    var hour = parseInt(m[4], 10);
+    var minute = parseInt(m[5], 10);
+    var second = parseInt(m[6], 10);
+
+    // Event time is in IST (UTC+05:30) -> subtract 5h 30m to get UTC
+    var utcMillis = Date.UTC(year, month, day, hour, minute, second) - (5.5 * 60 * 60 * 1000);
+    var d = new Date(utcMillis);
+    function p(n) { return String(n).padStart(2, "0"); }
+    return d.getUTCFullYear() + p(d.getUTCMonth() + 1) + p(d.getUTCDate()) +
+      "T" + p(d.getUTCHours()) + p(d.getUTCMinutes()) + p(d.getUTCSeconds()) + "Z";
+  }
+
+  function buildGoogleCalendarUrl(data) {
+    var startUtc = toUtcString(data.start);
+    var endUtc = toUtcString(data.end);
+    var datesParam = (startUtc && endUtc) ? (startUtc + "/" + endUtc) : "";
+
+    var params = [
+      "action=TEMPLATE",
+      "text=" + encodeURIComponent(data.title || "Wedding Event")
+    ];
+
+    if (datesParam) {
+      params.push("dates=" + encodeURIComponent(datesParam));
+    }
+    params.push("ctz=" + encodeURIComponent("Asia/Kolkata"));
+
+    if (data.description) {
+      params.push("details=" + encodeURIComponent(data.description));
+    }
+    if (data.location) {
+      params.push("location=" + encodeURIComponent(data.location));
+    }
+
+    return "https://calendar.google.com/calendar/render?" + params.join("&");
+  }
+
+  var buttons = document.querySelectorAll(".event-btn--calendar");
+  Array.prototype.forEach.call(buttons, function (btn) {
+    var data = {
+      title: btn.getAttribute("data-cal-title") || "Event",
+      start: btn.getAttribute("data-cal-start") || "",
+      end: btn.getAttribute("data-cal-end") || "",
+      location: btn.getAttribute("data-cal-location") || "",
+      description: btn.getAttribute("data-cal-description") || ""
+    };
+
+    var targetUrl = buildGoogleCalendarUrl(data);
+
+    if (btn.tagName.toLowerCase() === "a") {
+      if (!btn.getAttribute("href") || btn.getAttribute("href") === "#") {
+        btn.setAttribute("href", targetUrl);
+      }
+      btn.setAttribute("target", "_blank");
+      btn.setAttribute("rel", "noopener noreferrer");
+    } else {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.open(targetUrl, "_blank", "noopener,noreferrer");
+      });
+    }
+  });
+})();
+

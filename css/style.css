@@ -1093,6 +1093,49 @@ section {
   opacity: 1;
 }
 
+/* Button group — location + add to calendar */
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.event-actions .event-btn {
+  margin-top: 0;
+}
+
+.event-btn--calendar {
+  border-color: var(--gold);
+  color: var(--gold-deep);
+  font-family: 'Lora', serif;
+  cursor: pointer;
+  background: transparent;
+}
+
+.event-btn--calendar::before {
+  background: var(--gold);
+}
+
+.event-btn--calendar:hover {
+  color: #fff;
+  border-color: var(--gold);
+}
+
+.gallery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 0 1rem;
+}
+
+.gallery-actions .event-btn--calendar {
+  margin-top: 0;
+  padding: 12px 24px;
+}
+
 /* ============================================================
  TIMELINE
   ============================================================ */
@@ -2261,7 +2304,7 @@ section {
 
 .rsvp__attend-btn.is-selected .rsvp__attend-icon {
   border-color: var(--gold-soft);
-  background: rgba(203, 169, 104, .15);
+  background: rgba(26, 74, 128, .18);
 }
 
 /* ---- fields ---- */
@@ -2301,12 +2344,12 @@ section {
 
 .rsvp__input:focus {
   border-color: var(--gold-soft);
-  box-shadow: 0 0 0 3px rgba(203, 169, 104, .15);
+  box-shadow: 0 0 0 3px rgba(26, 74, 128, .15);
 }
 
 .rsvp__input.is-error {
-  border-color: #c0392b;
-  box-shadow: 0 0 0 3px rgba(192, 57, 43, .12);
+  border-color: #1A4A80;
+  box-shadow: 0 0 0 3px rgba(26, 74, 128, .15);
 }
 
 .rsvp__textarea {
@@ -2340,11 +2383,11 @@ section {
 }
 
 .rsvp__counter-btn:hover {
-  background: rgba(203, 169, 104, .12);
+  background: rgba(26, 74, 128, .10);
 }
 
 .rsvp__counter-btn:active {
-  background: rgba(203, 169, 104, .22);
+  background: rgba(26, 74, 128, .18);
 }
 
 .rsvp__counter-input {
